@@ -3,6 +3,8 @@
 This demo shows how to deploy Infinispan on OpenShift cluster (with TLS/SNI), and connect to the Grid using Hot Rod client.
 The demo will use https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/routes.html#secured-routes[Passthrough Route] which will allow clients to connect to it.
 
+The code located in this repository provides implementation for Multi-tenancy blog post, which can be found here: http://blog.infinispan.org/2017/09/multi-tenancy-infinispan-as-service.html
+
 == Prerequisites
 
 For running this demo you will need:
@@ -14,4 +16,8 @@ For running this demo you will need:
 == How to run the demo?
 
 * Deploy it on OpenShift local cluster using `./init_infrastructure.sh`
-* Play with `cache-checker` application.
+* Look at the logs of `cache-checker`. Notice to what caches it has access to.
+* Look at the source of `cache-checker` application.
+* Try to change SSL Realm and/or Route. Did you notice the change?
+* Try accessing different caches.
+
